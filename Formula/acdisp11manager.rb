@@ -2,15 +2,16 @@ class Acdisp11manager < Formula
  desc "ACDIS PKCS11 Manager Linux"
  homepage "https://www.austriacard.at"
  url "https://github.com/MarkusPunz12/ACDIS-PKCS11/releases/download/1.4.0/linux-p11manager-1.4.0.tar.gz"
- sha256 "ea678c56655b502579424c25a4821478c09e3e3c5870d2674e55973b7b92efaf"
+ sha256 "dc610e1ec408d6c9322d564173068a1d37d48c992b6bd5160e26ce432826f086"
 
   bottle do
     root_url "https://github.com/MarkusPunz12/homebrew-acdislinux/releases/download/acdisp11manager-1.4.0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "eec01ac41a4a0e26ea1ad2ea61da0a709d20182739a7c29173b77e2b3c9dccdc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "44596c3dc4b7b637048a2e6457cb62f66974bb840dea3447d33ff243ceb5c376"
   end
  depends_on "acdislinux"
  on_linux do
  def install
+ inreplace "acdis-pkcs11-manager.desktop", "##PREFIX##", "#{prefix}"
  prefix.install Dir["*"]
  bin.install_symlink prefix/"PKCS11Manager"
  end
