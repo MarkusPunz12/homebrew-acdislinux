@@ -1,13 +1,8 @@
 class Acdislinux < Formula
   desc "ACDIS PKCS11 Linux"
   homepage "https://www.austriacard.at"
-  url "https://github.com/MarkusPunz12/ACDIS-PKCS11/releases/download/1.4.0/linux-p11module-1.4.0.tar.gz"
-  sha256 "4593da3b69ba92641562acef815fad1c066a9f7ecf7b8030bafcbfd61756f314"
-
-  bottle do
-    root_url "https://github.com/MarkusPunz12/homebrew-acdislinux/releases/download/acdislinux-1.4.0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "027fe9ce165462e12e79b552b6951b4394a85e2c8a4b5ec426cfd22c7c0387da"
-  end
+  url "https://github.com/MarkusPunz12/ACDIS-PKCS11/releases/download/1.5.0/linux-p11module-1.5.0.tar.gz"
+  sha256 "744f6512efdcd68b9da5c0c1250a2339e7ad2222bea92636f46bfce284dabd5b"
   on_linux do
     def install
       prefix.install Dir["*"]
