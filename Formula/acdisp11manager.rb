@@ -2,7 +2,7 @@ class Acdisp11manager < Formula
  desc "ACDIS PKCS11 Manager Linux"
  homepage "https://www.austriacard.at"
  url "https://github.com/MarkusPunz12/ACDIS-PKCS11/releases/download/1.5.1/linux-p11manager-1.5.1.tar.gz"
- sha256 "91499b8cb4ca1ceec3dc108faa8dd4f702af67ed38d38ff69643c7e4a8b8a7e4"
+ sha256 "c7b6fd78d493a9b5f31c6abec0d9298014d353a67831095e38ae6fbf2d7d9a51"
  depends_on "acdislinux"
  on_linux do
  def install
